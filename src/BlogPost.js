@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// are we missing an import?
+import Comment from './Comment.js'
 
 export default class BlogPost extends Component {
   render() {
@@ -18,12 +18,15 @@ export default class BlogPost extends Component {
         Still I'll rise.<br/>
         -Maya Angelou<br/>
 
-        {/* (remove the comment ticks and their surrounding brackets)
         <Comment commentText={comments[0]} />
-        <Comment commentText={comments[0]} />
-        <Comment commentText={comments[0]} />
-        */}
+        <Comment commentText={comments[1]} />
+        <Comment commentText={comments[2]} />
       </div>
     );
   }
 }
+
+//here we are passing in info from BlogPost 
+//to its child Comment, inside the div we refer to Comment.
+//and we create a prop for Comment call commentText.
+//and asign that a value
